@@ -35,21 +35,21 @@ import pandas as pd
 import pantab
 ```
 
-# Load Excel data into a DataFrame
+## Load Excel data into a DataFrame
 ```bash
 df = pd.read_excel(
     r"C:\\Users\\jvije\\OneDrive\\DataDevQuest\\RWFD_Solar_Energy.xlsx",
     sheet_name="Actuals"
 )
 ```
-# Convert to .hyper file
+## Convert to .hyper file
 ```bash
 pantab.frame_to_hyper(df,
     r"C:\\Path\\To\\Output\\RWFD_Solar_Energy_Method1_Pantab.hyper",
     table="Extract")
 ```
 
-# Run it with:
+## Run it with:
 ```bash
 python src/method1_pantab.py
 ```
@@ -62,14 +62,14 @@ import pandas as pd
 from tableauhyperapi import HyperProcess, Connection, TableDefinition, SqlType, TableName, Inserter, CreateMode, Nullability
 ```
 
-# Load Excel data into a DataFrame
+## Load Excel data into a DataFrame
 ```bash
 df = pd.read_excel(
     r"C:\\Users\\jvije\\OneDrive\\DataDevQuest\\RWFD_Solar_Energy.xlsx",
     sheet_name="Actuals"
 )
 ```
-# Start the Hyper process
+## Start the Hyper process
 ```bash
 with HyperProcess() as hyper:
     with Connection(endpoint=hyper.endpoint,
@@ -90,7 +90,7 @@ with HyperProcess() as hyper:
             inserter.execute()
 ```
 
-# Run it with:
+## Run it with:
 ```bash
 python src/method2_hyperapi.py
 ```
