@@ -6,3 +6,6 @@ __pycache__/
 .env
 .venv
 *.hyper
+.ipynb_checkpoints
+.DS_Store
+.vscode/
